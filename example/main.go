@@ -38,9 +38,7 @@ func main() {
 	example(log.WithValues("module", "example"))
 }
 
-// example only depends on logr except when explicitly breaking the
-// abstraction. Even that part is written so that it works with non-zap
-// loggers.
+// example only depends on logr except when explicitly breaking the abstraction.
 func example(log logr.Logger) {
 	log.Info("hello", "val1", 1, "val2", map[string]int{"k": 1})
 	log.V(1).Info("you should see this")
