@@ -49,6 +49,7 @@ var (
 var (
 	_ logr.LogSink          = &kitlogger{}
 	_ logr.CallDepthLogSink = &kitlogger{}
+	_ Underlier             = &kitlogger{}
 )
 
 // New returns a logr.Logger with logr.LogSink implemented by go-kit/log.
